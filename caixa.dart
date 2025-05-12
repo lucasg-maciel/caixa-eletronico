@@ -43,9 +43,6 @@ List<Conta> _contas = [];
         print("Transação não realizada.");
       }
     }
-    if (conta.id_conta != id_conta) {
-      print("Conta não encontrada.");
-    }
   }
 
   void transferir(int id_conta_origem, int id_conta_destino, int valor){
@@ -57,17 +54,12 @@ List<Conta> _contas = [];
               conta_destino.deposito(valor);
             }
           }
-          if (conta_destino.id_conta != id_conta_destino) {
-            print("Conta de destino não encontrada.");
-          }
+          
         }
         else{
           print("Transação não realizada.");
         }
       }
-    }
-    if (conta.id_conta != id_conta_origem) {
-      print("Conta de origem não encontrada.");
     }
   }
 
